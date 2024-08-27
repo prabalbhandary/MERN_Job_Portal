@@ -1,7 +1,7 @@
-import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
+import { catchAsyncErrors } from "../middlewares/catchAsyncError.js";
 import ErrorHandler from "../middlewares/error.js";
-import { Application } from "../models/applicationSchema.js";
-import { Job } from "../models/jobSchema.js";
+import Application from "../models/applicationSchema.js";
+import Job from "../models/jobSchema.js";
 import { v2 as cloudinary } from "cloudinary";
 
 export const postApplication = catchAsyncErrors(async (req, res, next) => {

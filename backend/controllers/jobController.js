@@ -1,6 +1,6 @@
-import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
+import { catchAsyncErrors } from "../middlewares/catchAsyncError.js";
 import ErrorHandler from "../middlewares/error.js";
-import { Job } from "../models/jobSchema.js";
+import Job from "../models/jobSchema.js";
 
 export const postJob = catchAsyncErrors(async (req, res, next) => {
   const {
